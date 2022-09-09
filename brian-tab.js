@@ -8,7 +8,7 @@ const triggerBrianTab = (el)=>{
         id = '#' + byATag;
     }
     if(byRadio){
-        id = '#' + byRadio.replace('-radio',"");
+        id = '#' + byRadio.replace('-input',"");
 
     }
     if(id){
@@ -18,7 +18,8 @@ const triggerBrianTab = (el)=>{
         $(id).addClass('w--current');
         $(id+"-content").addClass('w--tab-active');
         if(byATag){
-            $(id+"-radio").prop("checked", true);
+            $('.accord-input').prop('checked', false)
+            $(id+"-input").prop("checked", true);
         }
         replaceUrl(id);
     }

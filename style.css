@@ -5569,7 +5569,11 @@ p.marg-blk.space-bar {
     transition: all 0.35s;
   }
 
-.accord-radio{
+  .w-tab-pane{
+    display: none;
+  }
+
+.accord-input{
   width: 100%;
   height: auto;
   position: absolute;
@@ -5584,13 +5588,14 @@ p.marg-blk.space-bar {
   transition: all 0.35s;
 }
 
-.accord-radio:checked + .tab-label {
+.accord-input:checked + .tab-label {
   background: #1a252f;
 }
-.accord-radio:checked + .tab-label::after {
+.accord-input:checked + .tab-label::after {
   transform: rotate(90deg);
 }
-.accord-radio:checked ~ .w-tab-pane {
+.accord-input:checked ~ .w-tab-pane {
   display: inline-block;
+  height: auto ;
   padding: 1em;
 }
